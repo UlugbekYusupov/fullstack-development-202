@@ -26,7 +26,6 @@
 // console.log(teskari);
 
 // let n = 1234;
-// let son = 0;
 // let katta = 0;
 
 // while (n > 0) {
@@ -38,3 +37,14 @@
 // }
 
 // console.log(katta);
+
+let n = 12347626;
+let katta = 0;
+
+while (n > 0) {
+    let oxirgi = n % 10;          
+    katta += 1;             
+    n = Math.floor(n / 10);       
+}
+
+console.log(katta);
