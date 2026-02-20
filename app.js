@@ -16,7 +16,7 @@
     5) undefined
     6) NaN
 
-* */
+*/
 
 
 
