@@ -1,0 +1,52 @@
+JS Interpreted til va JIT(Just In Time) compiled bo'ladi
+1995 yil Brenden Eich yaratgan
+class o'rniga objectlardan foydalnadi
+Bitta oqimli lekin asinxron til
+
+____________________________________________________________________________________________
+Browserga qarab kodlarni compile qiladi. Va har bir boriwserning alohida engine bor
+
+Chrome => V8Engine
+Firefox => Spider MOnkey
+Safari => Javascript Core
+Internet Explorer => Chakra
+___________________________________________________________________________________________
+
+Data Type la Primitive va Reference bo'ladi
+
+Primitive ----> Number, String, Boolen, null, undefined
+Reference ----> Objects, Functions, Arrays
+___________________________________________________________________________________________
+
+HOISTING va TDZ
+- JS 2 xil phase , bosqichda ishlaydi
+ 1. Memory creation(declaratsiyalar tepega ko'tariladi va xoitradan joy olib undefined qiymati beriladi)
+ 2. Executation phase(kod bajariladi qiymatlari tenglashtiriladi)
+
+- var block scope emas u function scope
+___________________________________________________________________________________________
+
+Conversion and Coercion
+
+Conversion --> user dasurchi qiladigan type casting, yaniy tyni o'zgartirish
+Coercion ---> JS avtomatik qiladigan type casting
+
+Coercion da truthy va falsy qiymati bor
+Coercion da matematik operatorlarga qarab chap va o'ng tarafdagi qimatlar type cast qilinadi.
+Agar + ishlatilsa numberlar stringga o'tadi. Boshqa amallarda esa string raqamga almashadi
+console.log("3"*4);//12
+console.log("3"+4);//34
+___________________________________________________________________________________________
+
+- truthy va falsy degan tushuncha bor JS da.
+
+  falsy larga quyidagilar kiradi. Yaniy agar o'zgaruvchi qiymati shunga teng bo'lsa false chiqadi:
+    1) false
+    2) 0
+    3) ""
+    4) null
+    5) undefined
+    6) NaN
+
+  truthy degani falsy bo'lmagan barchasi truthy bo'ladi
+___________________________________________________________________________________________

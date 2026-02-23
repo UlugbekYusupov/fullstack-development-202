@@ -31,13 +31,4 @@
 // };
 //
 // user.sayName();
-let name = "Global";
-
-function a(){
-    let b = "DED";
-    function show() {
-        console.log(this.b);
-    }
-}
-
-show();
+console.log("3"*4);
