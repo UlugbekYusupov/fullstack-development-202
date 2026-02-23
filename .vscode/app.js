@@ -55,30 +55,92 @@
 
 // console.log("Eng katta raqam:", max);
 
-for (let i = 0; i < 10; i++) {
-    console.log(i);
-}
+// for (let i = 0; i < 10; i++) {
+//     console.log(i);
+// }
 
-let a = 0;
-while (a < 10) {
-    console.log(a);
-    a++;
-}
+// let a = 0;
+// while (a < 10) {
+//     console.log(a);
+//     a++;
+// }
 
-let b = 0;
-do {
-    console.log(b);
-    b++;
-} while (b < 10);
+// let b = 0;
+// do {
+//     console.log(b);
+//     b++;
+// } while (b < 10);
 
-const user = {
-    name: "John",
-    age: 30,
-    city: "New York"
-};
+// const user = {
+//     name: "John",
+//     age: 30,
+//     city: "New York"
+// };
 
-for (let key in user) {
-    const element = user[key];
-    console.log(key, element);
-}
+// for (let key in user) {
+//     const element = user[key];
+//     console.log(key, element);
+// }
+
+// let a = 10;
+// let b = 20;
+
+// if (a > b) {    
+//     console.log("Max : ",a);
+// } else {
+//     console.log("Max : ",b);
+// }
+
+// let a = [-1, 2, 3, -4, 5]
+// let sum = 0;
+// for (let i = 0; i < a.length; i++) {
+//     if (a[i] < 0) {
+//         sum += 1;
+
+//     }
+// }
+// console.log("Manfiy sonlar: ", sum," ta");    
+
+ // 1-mashq
+// let list = [2,5,-9]
+// for (let i in list) {
+//     if (list[i] < 0) {
+//         console.log(list[i])
+//     }
+// }
+
+// 2-mashq
+// let list = [4,5,7,2,-2,0]
+// let katta = 0
+// for (let i in list) {
+//     if (list[i] < katta)
+//         list[i]=katta
+//     console.log(katta)
+// }
+
+// 3-mashq
+// let juft = 0
+// let toq = 0
+// for (let i=0;i<=15;i++) {
+//     if (i%2==0) {
+//         juft++
+//         console.log(i)
+//     } else {
+//         toq++
+//     }
+// }
+// console.log("Juft : ",juft)
+// console.log("Toq : ",toq)
+
+// 4-mashq
+// for (let i=0;i<=100;i++) {
+//     if (i%3==0 && i%5==0) {
+//         console.log("FIZZBUZZ")
+//     } else if (i%3==0) {
+//         console.log("FIZZ")
+//     } else if (i%5==0) {
+//         console.log("BUZZ")
+//     }
+// }
+
 
