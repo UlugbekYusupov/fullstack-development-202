@@ -1,0 +1,86 @@
+====HOISTING va TDZ====
+- JS 2 xil phase , bosqichda ishlaydi
+ 1. Memory creation(declaratsiyalar tepega ko'tariladi va xoitradan joy olib undefined qiymati beriladi)
+ 2. Executation phase(kod bajariladi qiymatlari tenglashtiriladi)
+
+- var block scope emas u function scope
+
+====Conversion and Coercion====
+
+- truthy va falsy degan tushuncha bor JS da.
+  falsy larga quyidagilar kiradi. Yaniy agar o'zgaruvchi qiymati shunga teng bo'lsa false chiqadi:
+    1) false
+    2) 0
+    3) ""
+    4) null
+    5) undefined
+    6) NaN
+
+====Exucusation context====
+
+
+
+Har safar scriptni ishga tushirsak(funksiyani chaqirish, o'zgaruvchini ishlatish).
+Uning uchun yangi ijro contexti yaraladi va Call stack ga tushadi. Har bir Exucation context Call stackga tushadi.
+
+
+Avvalo masalan bir kod misolida ko'rsak
+
+const firstName = "Lydia";
+const lastName = "Haliie";
+
+function greet(nameToGreet) {
+    const fullName = nameToGreet + " " + lastName;
+    return "Hello "+fullName;
+}
+
+greet(firstName);
+
+Bunda skript(kod) run berilganda Global Exucation context yaratiladi va har bir context 2 bosqichdan o'tadi.
+1. O'zgaruvchilar deklaratsiyalari uchun xotiradan joy ajratiladi
+
+Exucusation context 3ga bo'linadi
+ - Realm
+ - Lexical Environment
+ - Variable Environment
+
+Va bizda Realm bor. Uni quyidagilar tashkil qiladi.
+Global Object
+    - Specp propertis(Masiv funksiyalari,js elementlari),
+    - Host prop(brauzer bilan ishlaydigan timeout fayl funksiylari),
+    - User properties(biz elon qilgan funksiyalar, var orqali qilingan o'zgaruvchilar shu yerga qo'shiladi)
+Global Environment Record
+    - Global Environment record(var va funcsiyalarni oladi yaiy globallarni va o'zida ularni adresini saqlaydi)
+    - Declarative Record(Bunda barcha var yoki global funsiya bo'lmagan narsalarni identifikator bog'lanishlarini saqlaydi)
+Intrinsics -> Bunda barcha standart o'rnatilgan objectlar, funksiyalar bor.
+Unda asosan Massiv, funksiya sintaksi xatolari kabi ishlarni bajaradi.
+
+
+
+
+
+Exucation context 2ga bo'linadi
+GEC - Global Exucation context => BU birinchi marta JS falini yuklaganda yaratiladigan standart context. Hech qsysi funksiya ichida bo'lmagan kod shu yerda ishlaydi
+
+FEC - Function Exucation context => Har safar funksiya chaqirilganda yangi FEC(context) yratiladi. Har bir funksiya chqirilishi alohida contextga ega. Hatto bir xil funksiya bir necha marta chaqirilsa ham. Va funksiya ishlagach bu o'chirib yuboriladi.
+
+Va bu har bir GEC va FEC ham 2 ga bo'linadi
+
+Creation Phase - JS Engine ishga tushishidan oldin bajariladigan tayorgarlik bosqichi.
+1. O'zgaruvchilar uchun xotrad ajratiladi.
+2. Funksiya xotiraga saqlanadi.
+3. scope chainlarni hamaniqlashtirib oladi.
+4. shu orqali this ni ham aniqlaydi.
+this bu meni kim chqirdiga javob beradi . Va shu chaqirgan object malumotlariga this orqali murojat qilamiz.
+
+Exucation context - Engine kodlarni satrma satr bajaradi. var bilan e’lon qilingan o‘zgaruvchilarga
+haqiqiy qiymatlar beriladi. let va const o‘zgaruvchilar ishlatila boshlaydi.
+Funksiya chaqirilsa — yangi Function Execution Context (FEC) yaratiladi. Kod yuqoridan pastga qarab bajariladi
+
+Call Stack — bu LIFO (Last In, First Out) prinsipida ishlaydigan stack.
+1. Avval Global Exucation Context(GEC) stackga qo'shiladi.
+2. Funksiya chaqiriladi. Va FEC yaratilib. Stack tepasiga qo'yiladi.
+3. Eng tepada turgan context bajariladi.
+4. Funksiya tugasa stackdan chiqariladi.
+5. Oxirida GEC ham chiqadi.
+
