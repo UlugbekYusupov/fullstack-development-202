@@ -38,13 +38,13 @@
 
 // console.log(katta);
 
-let n = 12347626;
-let katta = 0;
+// let n = 12347626;
+// let katta = 0;
 
-while (n > 0) {
-    let oxirgi = n % 10;          
-    katta += 1;             
-    n = Math.floor(n / 10);       
-}
+// while (n > 0) {
+//     let oxirgi = n % 10;          
+//     katta += 1;             
+//     n = Math.floor(n / 10);       
+// }
 
-console.log(katta);
+// console.log(katta);

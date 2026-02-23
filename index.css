@@ -1,0 +1,18 @@
+.container{
+    width: 1200px;
+    margin: 50px auto;
+    background-image: url(rasm.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 2px inset #8a0303;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+h1{
+    font-size: 50px;
+    color: #8a0303;
+    font-family: 'Arial', sans-serif;
+}
