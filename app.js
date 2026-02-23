@@ -79,3 +79,23 @@ for (let i = 0; i <10; i++){
 //     console.log(a)
 //     a++;
 // }
+
+
+// let a = 10;
+// let b = 20;
+
+// if (a > b) {    
+//     console.log("Max : ",a);
+// } else {
+//     console.log("Max : ",b);
+// }
+
+let a = [-1, 2, 3, -4, 5]
+let sum = 0;
+for (let i = 0; i < a.length; i++) {
+    if (a[i] < 0) {
+        sum += 1;
+
+    }
+}
+console.log("Manfiy sonlar: ", sum," ta");
