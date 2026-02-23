@@ -1,9 +1,6 @@
-console.log("5" + 5);
-console.log("5" - 5);
-console.log("5" * 5);
-console.log("10" / 2);
-console.log(5 + true);
-console.log("10" - true);
-console.log("5" + true);
-console.log(5 + null);
-console.log(5 + undefined);
+console.log(a);
+let a = 20;
+
+const username = "Ulugbek";
+
+const password = String("kjfnbsdkjfnb");
