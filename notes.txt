@@ -2,8 +2,6 @@
 
 ====Exucusation context====
 
-
-
 Har safar scriptni ishga tushirsak(funksiyani chaqirish, o'zgaruvchini ishlatish).
 Uning uchun yangi ijro contexti yaraladi va Call stack ga tushadi. Har bir Exucation context Call stackga tushadi.
 
