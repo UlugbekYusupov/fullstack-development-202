@@ -55,4 +55,30 @@
 
 // console.log("Eng katta raqam:", max);
 
-//4-topshiriq
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+let a = 0;
+while (a < 10) {
+    console.log(a);
+    a++;
+}
+
+let b = 0;
+do {
+    console.log(b);
+    b++;
+} while (b < 10);
+
+const user = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+
+for (let key in user) {
+    const element = user[key];
+    console.log(key, element);
+}
+
