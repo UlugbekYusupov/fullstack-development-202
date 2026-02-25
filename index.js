@@ -1,28 +1,41 @@
-// let list = [23,54,52,36,31,63,2,3,56,64,6,3]
-
-// let toq = 0
-// let juft = 0
-
-// for (let i = 0; i < list.length; i++) {
-//     if (list[i] % 2 == 0) {
-//         juft += 1
-//     } else {
-//         toq += 1
+// 1-mashq
+// let list = [2,5,-9]
+// for (let i in list) {
+//     if (list[i] < 0) {
+//         console.log(list[i])
 //     }
 // }
-// console.log("Juft:", juft)
-// console.log("Toq:", toq)
 
+// 2-mashq
+// let list = [4,5,7,2,-2,0]
+// let katta = 0
+// for (let i in list) {
+//     if (list[i] < katta)
+//         list[i]=katta
+//     console.log(katta)
+// }
 
-// let son = prompt("Son kiriting : ")
-// let teskari = son.reverse()
-// console.log("Result : ",teskari)
+// 3-mashq
+// let juft = 0
+// let toq = 0
+// for (let i=0;i<=15;i++) {
+//     if (i%2==0) {
+//         juft++
+//         console.log(i)
+//     } else {
+//         toq++
+//     }
+// }
+// console.log("Juft : ",juft)
+// console.log("Toq : ",toq)
 
-// let katta = 234;
-// let a = Math.max(katta)
-// console.log("Max : ",a)
-
-let katta = 698;
-for (let i=0 ; i<katta.length(); i++) {
-    console.log(i)
-}
+// 4-mashq
+// for (let i=0;i<=100;i++) {
+//     if (i%3==0 && i%5==0) {
+//         console.log("FIZZBUZZ")
+//     } else if (i%3==0) {
+//         console.log("FIZZ")
+//     } else if (i%5==0) {
+//         console.log("BUZZ")
+//     }
+// }
