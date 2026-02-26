@@ -62,66 +62,137 @@
 // }
 
 
-const n = 10;
+// const n = 10;
+//
+// let evenCount = 0;
+// let oddCount = 0;
+//
+// for (let num = 1; num <= n; num++) {
+//     num % 2 === 0 ? evenCount++ : oddCount++;
+// }
+//
+// console.log("Juft:", evenCount);
+// console.log("Toq:", oddCount);
+//
+//
+//
+// let number = 1234;
+// let reversedNumber = 0;
+//
+// while (number > 0) {
+//     reversedNumber = reversedNumber * 10 + (number % 10);
+//     number = Math.floor(number / 10);
+// }
+//
+// console.log(reversedNumber);
+//
+// let num1 = 1234;
+// let maxDigit = 0;
+//
+// while (num1 > 0) {
+//     const digit = num1 % 10;
+//     if (digit > maxDigit) maxDigit = digit;
+//     num1 = Math.floor(num1 / 10);
+// }
+//
+// console.log(maxDigit);
+//
+//
+// let num2 = 1234;
+// let sum = 0;
+//
+// while (num2 > 0) {
+//     sum += num2 % 10;
+//     num2 = Math.floor(num2 / 10);
+// }
+//
+// console.log(sum);let num2 = 1234;
+// let sum = 0;
+//
+// while (num2 > 0) {
+//     sum += num2 % 10;
+//     num2 = Math.floor(num2 / 10);
+// }
+//
+// console.log(sum);
+//
+// let num3 = 12345;
+// let digitCount = 0;
+//
+// while (num3 > 0) {
+//     digitCount++;
+//     num3 = Math.floor(num3 / 10);
+// }
+//
+// console.log(digitCount);
+//==============================================================================4
+// let a = 10
+// let b = 11
+// if (a > b) {
+//     console.log(a)
+// }else{
+//     console.log(b)
+// }
 
-let evenCount = 0;
-let oddCount = 0;
+// const manfiySon = [1,2,-1];
+//
+// for(let i = 0; i <= manfiySon.length; i++) {
+//     if(manfiySon[i] <= 0){
+//         console.log(manfiySon[i],`manfiy son`);
+//     }else{
+//         console.log(manfiySon[i],"musbat son");
+//     }
+// }
+//
+// let a = 1234;
+// let b = -134;
+// let c = 42433;
+//
+// let max, mid, min;
+//
+// if (a >= b && a >= c) {
+//     max = a;
+//     if (b >= c) {
+//         mid = b;
+//         min = c;
+//     } else {
+//         mid = c;
+//         min = b;
+//     }
+// } else if (b >= a && b >= c) {
+//     max = b;
+//     if (a >= c) {
+//         mid = a;
+//         min = c;
+//     } else {
+//         mid = c;
+//         min = a;
+//     }
+// } else {
+//     max = c;
+//     if (a >= b) {
+//         mid = a;
+//         min = b;
+//     } else {
+//         mid = b;
+//         min = a;
+//     }
+// }
+// console.log(max + ", " + mid + ", " + min);
 
-for (let num = 1; num <= n; num++) {
-    num % 2 === 0 ? evenCount++ : oddCount++;
+//
+// for (let i = 0; i <= 15; i++) {
+//     if (i % 2 === 0) {
+//         console.log(i + "juft");
+//     } else {
+//         console.log(i + "toq");
+//     }
+// }
+
+for(int i = 1;i<=100;i++){
+    if (i%3===0 && i%5===0){
+        console.log(i,"FizzBuzz");
+    }else if(i%3===0){
+        console.log(i,"BuzzBuzz")
+    }else if(i%5===1){}
 }
-
-console.log("Juft:", evenCount);
-console.log("Toq:", oddCount);
-
-
-
-let number = 1234;
-let reversedNumber = 0;
-
-while (number > 0) {
-    reversedNumber = reversedNumber * 10 + (number % 10);
-    number = Math.floor(number / 10);
-}
-
-console.log(reversedNumber);
-
-let num1 = 1234;
-let maxDigit = 0;
-
-while (num1 > 0) {
-    const digit = num1 % 10;
-    if (digit > maxDigit) maxDigit = digit;
-    num1 = Math.floor(num1 / 10);
-}
-
-console.log(maxDigit);
-
-
-let num2 = 1234;
-let sum = 0;
-
-while (num2 > 0) {
-    sum += num2 % 10;
-    num2 = Math.floor(num2 / 10);
-}
-
-console.log(sum);let num2 = 1234;
-let sum = 0;
-
-while (num2 > 0) {
-    sum += num2 % 10;
-    num2 = Math.floor(num2 / 10);
-}
-
-console.log(sum);
-
-let num3 = 12345;
-let digitCount = 0;
-
-while (num3 > 0) {
-    digitCount++;
-    num3 = Math.floor(num3 / 10);
-}
-
-console.log(digitCount);
