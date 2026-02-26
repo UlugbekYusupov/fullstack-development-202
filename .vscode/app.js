@@ -143,4 +143,77 @@
 //     }
 // }
 
+//5-mashq
+
+// for (let i = 1; i <= 100; i++) {
+
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FizzBuzz");
+//   } 
+//   else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   } 
+//   else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   } 
+//   else {
+//     console.log(i);
+//   }
+
+// }
+
+//6-mashq
+
+// for (let num = 100; num <= 999; num++) {
+
+//   let temp = num;
+//   let sum = 0;
+
+//   while (temp > 0) {
+//     let digit = temp % 10;        
+//     sum += digit * digit * digit; 
+//     temp = Math.floor(temp / 10); 
+//   }
+
+//   if (sum === num) {
+//     console.log(num);
+//   }
+
+// }
+
+//7-mashq
+
+const students = [
+  { name: "David", marks: 80 },
+  { name: "Vinoth", marks: 77 },
+  { name: "Divya", marks: 88 },
+  { name: "Ishitha", marks: 95 },
+  { name: "Thomas", marks: 68 }
+];
+
+let total = 0;
+
+for (let i = 0; i < students.length; i++) {
+  total += students[i].marks;
+}
+
+let average = total / students.length;
+
+console.log("Average Marks:", average);
+
+let grade;
+
+if (average < 60) {
+  grade = "F";
+} else if (average < 70) {
+  grade = "D";
+} else if (average < 80) {
+  grade = "C";
+} else if (average < 90) {
+  grade = "B";
+} else {
+  grade = "A";
+}
+
+console.log("Grade:", grade);
 
