@@ -1,0 +1,108 @@
+1) Execution Context nima?
+Execution Context — bu JavaScript kodni bajarish uchun yaratiladigan maxsus muhit.
+
+Har safar:
+    - JS fayl ishga tushsa
+    - Funksiya chaqirilsa
+yangi Execution Context yaratiladi. Va har bir Execution Context Call Stack ga qo‘shiladi.
+
+2) Execution Context turlari
+JavaScriptda 2 xil Execution Context bor:
+
+    1) GEC — Global Execution Context
+        - JS fayl yuklanganda birinchi bo‘lib yaratiladi.
+        - Funksiya ichida bo‘lmagan barcha kod shu yerda ishlaydi.(scopelardan tashqaridagi barcah kodlar yaniy fayl ichidagi)
+        - Faqat bitta bo‘ladi.
+
+    2) FEC — Function Execution Context
+        - Har safar funksiya chaqirilganda yaratiladi.
+        - Har chaqiruv alohida context yaratadi.
+        - Funksiya tugagach o‘chiriladi.
+
+3) Execution Context ichida nima bor?
+Har bir Execution Context 3 qismdan iborat:
+    - Variable Environment
+    - Lexical Environment
+    - This binding
+
+    3.1 Variable Environment
+    Bu yerda:
+        - var o‘zgaruvchilar
+        - function declaration lar
+    saqlanadi
+
+    3.2 Lexical Environment
+        3.2.1 Environment Recordda
+        Bu yerda:
+            - let
+            - const
+            - blok ichidagi o‘zgaruvchilar
+        saqlanadi.
+
+        3.2.2 Outer Environment Reference
+        da tashqi scope linki saqlanadi
+            - Scope Chain ham shu yerda ishlaydi.
+
+    3.3 This binding
+    this kim chaqirganiga qarab aniqlanadi.
+    Masalan: bu degani funcksiya kimga tegishli bo'lsa o'sha objectni malumotlariga kira oladi degani
+
+4) Execution Context 2 bosqichda ishlaydi
+Har bir context 2 fazadan o‘tadi:
+    - Creation Phase (yaratish bosqichi)
+    - Execution Phase (bajarish bosqichi)
+
+    4.1 Creation Phase (Muhim qism)
+    JS kodni bajarishdan oldin tayyorgarlik qiladi.
+    Bu bosqichda:
+        - var o‘zgaruvchilar uchun joy ajratiladi va undefined beriladi.
+        - Function declaration lar to‘liq xotiraga joylanadi.
+        - let va const ham xotiraga olinadi, lekin qiymat berilmaydi (Temporal Dead Zone).
+        - Scope chain aniqlanadi.
+        - this aniqlanadi.
+
+    4.2 Execution(Ijro) Phase
+    Bu bosqichda:
+        - Kod yuqoridan pastga bajariladi.
+        - var o‘zgaruvchilarga haqiqiy qiymat beriladi.
+        - let va const ishlay boshlaydi.
+        - Funksiya chaqirilsa → yangi FEC yaratiladi.
+
+
+5) Call Stack qanday ishlaydi?
+Call Stack — bu LIFO (Last In First Out) prinsipida ishlaydi.
+    Ketma-ketlik:
+    - Avval Global Execution Context stackga qo‘shiladi.
+    - Funksiya chaqiriladi → yangi FEC yaratiladi.
+    - FEC stack tepasiga qo‘yiladi.
+    - Eng tepadagi context bajariladi.
+    - Funksiya tugasa → stackdan chiqariladi.
+    - Oxirida GEC ham chiqariladi.
+    ___________________________________________________
+    const firstName = "Lydia";
+    const lastName = "Haliie";
+    function greet(nameToGreet) {
+        const fullName = nameToGreet + " " + lastName;
+        return "Hello " + fullName;
+    }
+
+    greet(firstName);
+    ___________________________________________________
+    1-bosqich: Global Execution Context yaratiladi
+    Creation Phase:
+    firstName → xotiraga olinadi
+    lastName → xotiraga olinadi
+    greet → to‘liq funksiya sifatida xotiraga olinadi
+    Execution Phase:
+    firstName = "Lydia"
+    lastName = "Haliie"
+    greet(firstName) chaqiriladi
+    2-bosqich: Function Execution Context (greet uchun)
+    Creation Phase:
+    nameToGreet → argument sifatida qiymat oladi
+    fullName → xotiraga olinadi
+    Execution Phase:
+    fullName = nameToGreet + " " + lastName
+    return ishlaydi
+    Funksiya tugaydi
+    FEC stackdan o‘chadi
