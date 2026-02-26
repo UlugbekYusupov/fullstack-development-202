@@ -8,10 +8,10 @@
 // console.log(5 + null);
 // console.log(5 + undefined);
 
-let numbers = [12, 5, 7, 8];
+// let numbers = [12, 5, 7, 8];
 
-let juft = 0;
-let toq = 0;
+// let juft = 0;
+// let toq = 0;
 
 for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] % 2 === 0) {
@@ -23,3 +23,6 @@ for (let i = 0; i < numbers.length; i++) {
 
 console.log("Juft:", juft);
 console.log("Toq:", toq);
+
+
+
