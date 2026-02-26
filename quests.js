@@ -189,10 +189,34 @@
 //     }
 // }
 
-for(int i = 1;i<=100;i++){
-    if (i%3===0 && i%5===0){
-        console.log(i,"FizzBuzz");
-    }else if(i%3===0){
-        console.log(i,"BuzzBuzz")
-    }else if(i%5===1){}
-}
+// for (let i = 1; i <= 100; i++) {
+
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FizzBuzz");
+//   }
+//   else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   }
+//   else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   }
+//   else {
+//     console.log(i);
+//   }
+
+// }
+
+
+// for (let num = 100; num <= 999; num++) {
+
+//   let hundreds = Math.floor(num / 100);
+//   let tens = Math.floor((num % 100) / 10);
+//   let ones = num % 10;
+
+//   let sum = (hundreds  3) + (tens  3) + (ones ** 3);
+
+//   if (sum === num) {
+//     console.log(num + " is an Armstrong number");
+//   }
+
+// }
