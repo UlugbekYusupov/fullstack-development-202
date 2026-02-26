@@ -31,3 +31,21 @@
 //   console.log(element);
 // }
 
+// function myFunction(){
+//     console.log("Salom");
+// }
+
+// myFunction()
+
+function outer() {
+  let firstname = "Mirzoulugbek";
+
+  return function() {
+    const fullname = firstname + "Yusupov";
+    console.log(fullname);
+  };
+}
+
+let inner = outer();
+
+inner()
