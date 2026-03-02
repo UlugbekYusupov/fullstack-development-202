@@ -1,144 +1,255 @@
 // // Topshiriq 1
-// let a = 12;
-// let b = 7;
-
-// if (a > b) {
-//     console.log("Eng katta son:", a);
-// } else if (b > a) {
-//     console.log("Eng kichik son:", b);
-// } else {
-//     console.log("Ikkala son teng");
+// function greet(name) {
+//     return "Hello, " + name + "!";
 // }
+
+// console.log(greet("Ali"));
+
 
 // // Topshiriq 2
-// let x = 3;
-// let y = -7;
-// let z = 2;
+// function isPrime(n) {
 
-// let kopaytma = x * y * z;
+//     if (n <= 1) {
+//         return false;
+//     }
 
-// if (kopaytma > 0) {
-//     console.log("Qo'shish belgisi: +");
-// } else if (kopaytma < 0) {
-//     console.log("Ayirish belgisi: -");
-// } else {
-//     console.log("Natija 0 ga teng");
+//     for (let i = 2; i < n; i++) {
+//         if (n % i === 0) {
+//             return false;
+//         }
+//     }
+
+//     return true;
 // }
+
+// console.log(isPrime(7));  
+// console.log(isPrime(10)); 
+
 
 // // Topshiriq 3
-// let a = 0;
-// let b = -1;
-// let c = 4;
+// function countDigits(n) {
 
-// let first, second, third;
+//     let count = 0;
 
-// if (a >= b && a >= c) {
-//     first = a;
-//     if (b >= c) {
-//         second = b;
-//         third = c;
-//     } else {
-//         second = c;
-//         third = b;
+//     n = Math.abs(n); 
+
+//     while (n > 0) {
+//         count++;
+//         n = Math.floor(n / 10);
 //     }
-// } else if (b >= a && b >= c) {
-//     first = b;
-//     if (a >= c) {
-//         second = a;
-//         third = c;
-//     } else {
-//         second = c;
-//         third = a;
-//     }
-// } else {
-//     first = c;
-//     if (a >= b) {
-//         second = a;
-//         third = b;
-//     } else {
-//         second = b;
-//         third = a;
-//     }
+
+//     return count;
 // }
 
-// console.log(first + ", " + second + ", " + third);
+// console.log(countDigits(12345)); 
+
 
 // // Topshiriq 4
-// for (let i = 0; i <= 15; i++) {
-//     if (i % 2 === 0) {
-//         console.log(i + " Juft son");
-//     } else {
-//         console.log(i + " Toq son");
+// function isPalindrome(n) {
+
+//     let k = n;
+//     let s = 0;
+
+//     while (n > 0) {
+//         s = s * 10 + n % 10;
+//         n = Math.floor(n / 10);
 //     }
+
+//     return k === s;
 // }
+
+// console.log(isPalindrome(121)); 
+// console.log(isPalindrome(123)); 
+
 
 // // Topshiriq 5
-// for (let i = 1; i <= 100; i++) {
+// function isArmstrong(n) {
 
-//     if (i % 3 === 0 && i % 5 === 0) {
-//         console.log("FizzBuzz");
+//     let original = n;
+//     let sum = 0;
+//     let digits = 0;
+
+//     let temp = n;
+//     while (temp > 0) {
+//         digits++;
+//         temp = Math.floor(temp / 10);
 //     }
-//     else if (i % 3 === 0) {
-//         console.log("Fizz");
+
+//     temp = n;
+//     while (temp > 0) {
+//         let digit = temp % 10;
+//         sum += digit ** digits;
+//         temp = Math.floor(temp / 10);
 //     }
-//     else if (i % 5 === 0) {
-//         console.log("Buzz");
-//     }
-//     else {
-//         console.log(i);
-//     }
+
+//     return sum === original;
 // }
+
+// console.log(isArmstrong(153)); 
+// console.log(isArmstrong(123)); 
+
 
 // // Topshiriq 6
-// for (let son = 100; son <= 999; son++) {
+// function createCounter(start) {
 
-//     let yuzlik = Math.floor(son / 100);          
-//     let onlik = Math.floor((son % 100) / 10);    
-//     let birlik = son % 10;                       
-
-//     let kubYigindi =
-//         yuzlik * yuzlik * yuzlik +
-//         onlik * onlik * onlik +
-//         birlik * birlik * birlik;
-
-//     if (kubYigindi === son) {
-//         console.log(son + " — Armstrong son");
-//     }
+//     let count = start; 
+//     return {
+//         increment: function() {
+//             count++;
+//         },
+//         decrement: function() {
+//             count--;
+//         },
+//         getCount: function() {
+//             return count;
+//         }
+//     };
 // }
 
-// // Topshiriq 7 PRACTISE
-// Talabalar ro‘yxati (ism va ball)
-let talabalar = [
-    { ism: "Abdulloh", ball: 80 },
-    { ism: "Doston", ball: 77 },
-    { ism: "Bexruz", ball: 88 },
-    { ism: "Abdulaziz", ball: 95 },
-    { ism: "Diyorbek", ball: 68 }
-];
+// const counter = createCounter(10);
 
-for (let i = 0; i < talabalar.length; i++) {
+// counter.increment();
+// counter.increment();
+// counter.decrement();
 
-    let ball = talabalar[i].ball;
-    let baho = "";
+// console.log(counter.getCount()); // 11
 
-    if (ball < 60) {
-        baho = "F";
-    } else if (ball < 70) {
-        baho = "D";
-    } else if (ball < 80) {
-        baho = "C";
-    } else if (ball < 90) {
-        baho = "B";
-    } else {
-        baho = "A";
-    }
 
-    console.log(
-        "Talaba: " +
-        talabalar[i].ism +
-        " | Ball: " +
-        ball +
-        " | Baho: " +
-        baho
-    );
+// // // Topshiriq 7
+// function once(fn) {
+
+//     let executed = false; 
+
+//     return function() {
+
+//         if (!executed) {
+//             executed = true;
+//             return fn();
+//         }
+
+//         console.log("Function already executed!");
+//     };
+// }
+
+// function sayHello() {
+//     console.log("Hello!");
+// }
+
+// const runOnce = once(sayHello);
+
+// runOnce(); 
+// runOnce(); 
+// runOnce(); 
+
+
+// // // Topshiriq 8
+// function lazyAdder(a) {
+
+//     return function(b) {
+//         return a + b;
+//     };
+// }
+
+// const add5 = lazyAdder(5);
+
+// console.log(add5(10)); // 15
+// console.log(add5(20)); // 25
+
+
+// // Debounce Function 1
+// function debounce(fn, delay) {
+
+//     let timer = null; 
+
+//     return function() {
+
+//         if (timer !== null) {
+//             clearTimeout(timer);
+//         }
+
+//         timer = setTimeout(function() {
+//             fn();
+//         }, delay);
+//     };
+// }
+
+
+// function salom() {
+//     console.log("Salom ishladi");
+// }
+
+// let yangiFunksiya = debounce(salom, 1000);
+
+// yangiFunksiya();
+// yangiFunksiya();
+// yangiFunksiya();
+
+
+// // Throttle Function 2
+// function throttle(fn, interval) {
+
+//     let oxirgiVaqt = 0;
+
+//     return function() {
+
+//         let hozir = Date.now();
+
+//         if (hozir - oxirgiVaqt >= interval) {
+//             oxirgiVaqt = hozir;
+//             fn();
+//         }
+//     };
+// }
+
+
+// function yoz() {
+//     console.log("Ishladi");
+// }
+
+// let yangi = throttle(yoz, 2000);
+
+// setInterval(yangi, 500);
+
+
+// Task Scheduler 3
+function taskScheduler() {
+
+    let royxat = []; 
+
+    return {
+
+        schedule: function(task, delay) {
+
+            let id = setTimeout(function() {
+                task();
+            }, delay);
+
+            royxat.push(id);
+        },
+
+        cancelAll: function() {
+
+            for (let i = 0; i < royxat.length; i++) {
+                clearTimeout(royxat[i]);
+            }
+
+            royxat = [];
+            console.log("Hamma vazifalar bekor qilindi");
+        }
+    };
 }
+
+
+let scheduler = taskScheduler();
+
+scheduler.schedule(function() {
+    console.log("1-vazifa");
+}, 2000);
+
+scheduler.schedule(function() {
+    console.log("2-vazifa");
+}, 4000);
+
+setTimeout(function() {
+    scheduler.cancelAll();
+}, 1000);
