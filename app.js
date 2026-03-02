@@ -19,15 +19,5 @@
 // user.sayName();
 
 
-// const user = {
-//     name: "Ali",
-//     sayName: function() {
-//         let a = {name:"daw"}
-//         function inner() {
-//             console.log(this.name);
-//         }
-//         inner();
-//     }
-// };
-//
-// user.sayName();
+
+

@@ -25,21 +25,23 @@ Har bir Execution Context 3 qismdan iborat:
     - Lexical Environment
     - This binding
 
-    3.1 Variable Environment
-    Bu yerda:
-        - var o‘zgaruvchilar
-        - function declaration lar
-    saqlanadi
+
 
     3.2 Lexical Environment
-        3.2.1 Environment Recordda
+        3.2.1 Variable Environment
+        Bu yerda:
+            - var o‘zgaruvchilar
+            - function declaration lar
+        saqlanadi
+
+        3.2.2 Environment Recordda
         Bu yerda:
             - let
             - const
             - blok ichidagi o‘zgaruvchilar
         saqlanadi.
 
-        3.2.2 Outer Environment Reference
+        3.2.3 Outer Environment Reference
         da tashqi scope linki saqlanadi
             - Scope Chain ham shu yerda ishlaydi.
 
