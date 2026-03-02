@@ -14,7 +14,6 @@
 // console.log("Juft sonlar:", juftlar.join(", "));
 // console.log("Toq sonlar:", toqlar.join(", "));
 
-
 // let n = 1234;
 // let reversed = 0;
 
@@ -25,13 +24,12 @@
 // }
 // console.log(reversed);
 
-
-// let n = 78945;  
+// let n = 78945;
 // let max = 0;
 // while (n > 0) {
 //     let digit = n % 10;
 
-//     if (digit > max) {   
+//     if (digit > max) {
 //         max = digit;
 //     }
 
@@ -40,20 +38,18 @@
 
 // console.log("Eng katta raqam:", max);
 
-
 // let n = 53827;
 // let sum = 0;
 
 // while (n > 0) {
 
 //     let digit = n % 10;
-//     sum = sum + digit;    
+//     sum = sum + digit;
 
 //     n = Math.floor(n / 10);
 // }
 
 // console.log("Raqamlar yig'indisi:", sum);
-
 
 // let n = 53827;
 // let count = 0;
@@ -64,15 +60,14 @@
 
 // while (n > 0) {
 //     n = Math.floor(n / 10);
-//     count = count + 1; 
+//     count = count + 1;
 // }
 
 // console.log("Raqamlar soni:", count);
 
-
-for (let i = 0; i <10; i++){
-    console.log(i)
-}
+// for (let i = 0; i <10; i++){
+//     console.log(i)
+// }
 
 // let a = 0;
 // while (a < 10){
@@ -80,22 +75,107 @@ for (let i = 0; i <10; i++){
 //     a++;
 // }
 
-
 // let a = 10;
 // let b = 20;
 
-// if (a > b) {    
+// if (a > b) {
 //     console.log("Max : ",a);
 // } else {
 //     console.log("Max : ",b);
 // }
 
-let a = [-1, 2, 3, -4, 5]
-let sum = 0;
-for (let i = 0; i < a.length; i++) {
-    if (a[i] < 0) {
-        sum += 1;
+// let a = [-1, 2, 3, -4, 5]
+// let sum = 0;
+// for (let i = 0; i < a.length; i++) {
+//     if (a[i] < 0) {
+//         sum += 1;
 
-    }
-}
-console.log("Manfiy sonlar: ", sum," ta");
+//     }
+// }
+// console.log("Manfiy sonlar: ", sum," ta");
+
+// function sum(a,b) {
+//     console.log(a+b)
+// }
+
+// sum(5,4)
+
+// function isPrime(n){
+//     if (n <= 1) return false;
+
+//     for (let i = 2; i < n; i++) {
+//         if (n % i === 0){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+// console.log(isPrime(10));
+// console.log(isPrime(7));
+
+// function countDigits(n) {
+//     return Math.abs(n).toString().length;
+// }
+
+// console.log(countDigits(12345));
+// console.log(countDigits(-9876));
+
+// function isPalindrome(n) {
+//     n = Math.abs(n);
+//     let original = n;
+//     let reversed = 0;
+
+//     while (n > 0) {
+//         let digit = n % 10;
+//         reversed = reversed * 10 + digit;
+//         n = Math.floor(n / 10);
+//     }
+
+//     return original === reversed;
+// }
+
+// console.log(isPalindrome(121));
+// console.log(isPalindrome(123));
+
+// function createCounter(start) {
+//     let count = start;
+
+//     return {
+//         increment() {
+//             count++;
+//         },
+//         decrement() {
+//             count--;
+//         },
+//         getCount() {
+//             return count;
+//         }
+//     };
+// }
+
+// const counter = createCounter(10);
+
+// counter.increment();
+// counter.increment();
+// counter.decrement();
+
+// console.log(counter.getCount());
+
+// function foydlanuvchi(ism, adress, ovqat) {
+//   return `Hurmatli ${ism}, sizning buyurtma qilgan ${ovqat} ingiz 15 daqiqada tayyor bo'ladi va ${adress} manziliga yetkazib beriladi. Buyurtmangiz uchun rahmat`;
+// }
+
+// console.log(foydlanuvchi("Samandar", "Yangi Sergili 15", "Lavash"));
+
+
+// function lazyAdder(a) {
+//     return function(b) {
+//         return a + b;
+//     };
+// }
+
+// const add5 = lazyAdder(5);
+
+// console.log(add5(10)); 
+// console.log(add5(20)); 
