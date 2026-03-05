@@ -35,7 +35,6 @@
 // console.log(last([7, 9, 0, -2], 3));
 // console.log(last([7, 9, 0, -2], 6));
 
-
 // challange 3
 
 // myColor = ["Red", "Green", "Whitte", "Black"];
