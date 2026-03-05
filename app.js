@@ -17,7 +17,14 @@
 // };
 //
 // user.sayName();
+// console.log(a);
+//
+// let list = [1,2,3,["SALOM","121"]];
+// list[3].splice(0, 1);
+// console.log(list);
 
 
-
-
+// const list1 = [1,2,3];
+// let list2 = list1;
+// list2.push('DDD');
+// console.log(list1);
