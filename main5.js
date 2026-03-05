@@ -212,3 +212,50 @@
 //     scheduler.cancelAll();
 //     console.log("Canceled all tasks");
 // }, 1500);
+
+
+
+
+//
+// let password = "Smrfi23989$$$"
+//
+// function cheked(a){
+//     if (a.length > 8){
+//         let Upper = 0;
+//         let Number = 0
+//         let Char = 0
+//
+//         for (let i of a){
+//             if (/^[A-Z]$/.test(i)) {
+//                 Upper += 1
+//             }
+//             else if (/^[0-9]$/.test(i)) {
+//                 Number += 1
+//             }
+//             else if (/^[^a-zA-Z0-9]$/.test(i)) {
+//                 Char += 1
+//             }
+//         }
+//         if (Upper > 0 && Number > 0 && Char > 0) {
+//             console.log("Strong password");
+//         }
+//         else if (
+//             (Upper > 0 && Number > 0) ||
+//             (Upper > 0 && Char > 0) ||
+//             (Number > 0 && Char > 0)
+//         ) {
+//             console.log("Medium password");
+//         }
+//         else {
+//             console.log("Weak password");
+//         }
+//     }
+//     else{
+//         console.log("%s is not eough. You must enter minimum 8 charakter.", a);
+//     }
+// }
+//
+// cheked(password)
+
+
+

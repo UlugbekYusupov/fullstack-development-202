@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <title>Interactive To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Fullstack Development</h1>
+<section class="app">
+    <h1>Interactive To-Do List</h1>
+    <div class="list" id="taskList"></div>
+    <button class="btn primary" id="openModal">Add Task</button>
+</section>
+
+<div class="overlay" id="overlay">
+    <div class="modal">
+        <header>Add Task</header>
+        <div class="modal-body">
+        <input class="input" id="titleInput" type="text" placeholder="Task Title">
+        <textarea class="input" id="descInput" placeholder="Task Description"></textarea>
+        <select class="input" id="statusInput">
+            <option value="pending">Pending</option>
+            <option value="progress">In Progress</option>
+            <option value="complete">Completed</option>
+        </select>
+        </div>
+        <div class="actions">
+            <button class="btn primary" id="saveTask">Save Task</button>
+            <button class="btn danger" id="closeModal">Close</button>
+        </div>
     </div>
-    <script src="main2.js"></script>
+</div>
+
+<script src="main8.js"></script>
 </body>
 </html>
