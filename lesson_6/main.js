@@ -1,11 +1,11 @@
 // // challenge 1
 // function first(arr, n) {
 
-//     if (arr.length === 0) {
+//     if (arr.length == 0) {
 //         return [];
 //     }
 
-//     if (n === undefined) {
+//     if (n == undefined) {
 //         return arr[0];
 //     }
 
@@ -27,17 +27,16 @@
 // // challenge 2
 // function last(arr, n) {
 
-//     if (arr.length === 0) {
+//     if (arr.length == 0) {
 //         return [];
 //     }
 
-//     if (n === undefined) {
-//         return arr[arr.length - 1];
+//     if (n == undefined) {
+//         return arr.pop();
 //     }
 
-//     return arr.slice(Math.max(arr.length - n, 0));
+//     return arr.slice(- n);
 // }
-
 
 // console.log(last([7, 9, 0, -2]));    
 // console.log(last([7, 9, 0, -2], 3));   
@@ -142,20 +141,20 @@
 // }
 
 
-// challenge 9
-let array1 = [1,0,2,3,4];
-let array2 = [3,5,6,7,8,13];
+// // challenge 9
+// let array1 = [1,0,2,3,4];
+// let array2 = [3,5,6,7,8,13];
 
-let result = [];
+// let result = [];
 
-let maxLength = Math.max(array1.length, array2.length);
+// let maxLength = Math.max(array1.length, array2.length);
 
-for (let i = 0; i < maxLength; i++) {
+// for (let i = 0; i < maxLength; i++) {
 
-    let num1 = array1[i] || 0; 
-    let num2 = array2[i] || 0;
+//     let num1 = array1[i] || 0; 
+//     let num2 = array2[i] || 0;
 
-    result.push(num1 + num2); 
-}
+//     result.push(num1 + num2); 
+// }
 
-console.log(result);
+// console.log(result);
