@@ -3,7 +3,6 @@ let color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
 let o = ["th", "st", "nd", "rd"];
 
 for (let i = 0; i < color.length; i++) {
-
   let num = i + 1;
   let suffix;
 
@@ -13,5 +12,4 @@ for (let i = 0; i < color.length; i++) {
   else suffix = "th";
 
   console.log(num + suffix + " choice is " + color[i]);
-
 }

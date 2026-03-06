@@ -1,5 +1,4 @@
-function last(arr, n) {
-
+function last(arr, n = null) {
   if (n === undefined) {
     return arr[arr.length - 1];
   }
@@ -8,13 +7,8 @@ function last(arr, n) {
     n = arr.length;
   }
 
-  let result = [];
-
-  for (let i = arr.length - n; i < arr.length; i++) {
-    result.push(arr[i]);
-  }
-
-  return result;
+  var newArr = arr.reverse();
+  return newArr.slice(-n);
 }
 
 console.log(last([7, 9, 0, -2]));
