@@ -183,37 +183,188 @@
 
 //7-mashq
 
-const students = [
-  { name: "David", marks: 80 },
-  { name: "Vinoth", marks: 77 },
-  { name: "Divya", marks: 88 },
-  { name: "Ishitha", marks: 95 },
-  { name: "Thomas", marks: 68 }
-];
+// const students = [
+//   { name: "David", marks: 80 },
+//   { name: "Vinoth", marks: 77 },
+//   { name: "Divya", marks: 88 },
+//   { name: "Ishitha", marks: 95 },
+//   { name: "Thomas", marks: 68 }
+// ];
 
-let total = 0;
+// let total = 0;
 
-for (let i = 0; i < students.length; i++) {
-  total += students[i].marks;
-}
+// for (let i = 0; i < students.length; i++) {
+//   total += students[i].marks;
+// }
 
-let average = total / students.length;
+// let average = total / students.length;
 
-console.log("Average Marks:", average);
+// console.log("Average Marks:", average);
 
-let grade;
+// let grade;
 
-if (average < 60) {
-  grade = "F";
-} else if (average < 70) {
-  grade = "D";
-} else if (average < 80) {
-  grade = "C";
-} else if (average < 90) {
-  grade = "B";
-} else {
-  grade = "A";
-}
+// if (average < 60) {
+//   grade = "F";
+// } else if (average < 70) {
+//   grade = "D";
+// } else if (average < 80) {
+//   grade = "C";
+// } else if (average < 90) {
+//   grade = "B";
+// } else {
+//   grade = "A";
+// }
 
-console.log("Grade:", grade);
+// console.log("Grade:", grade);
+
+
+
+// function sum(a, b) {
+//     return a + b;
+// }
+// console.log(sum(7, 14));
+
+// const firstname = "Shuhrat";
+// let lastname = "Salimov";
+
+// function greet(nametoGreet){
+//     const fullname = nametoGreet + " " + lastname;
+//     return "Hello, " + fullname + "!";
+// }
+// greet(firstname);
+
+// console.log(greet(firstname));  
+
+//2-topshiriq 
+
+// function isPrime(n){
+//     if (n <= 1) return false;
+//     if (n == 2) return true;
+//     if (n % 2 == 0) return false;
+
+//     if (let i=3; i <= Math.sqrt(n); i+=2) {
+//         if (n % i == 0) return false;
+// }
+// return false;
+// }
+
+
+
+//3-topshiriq
+
+// function countDigits(num) {
+//     if (num === 0) return 1;
+//     return Math.floor(Math.log10(Math.abs(num))) + 1;
+// }
+// console.log(countDigits(12345)); 
+
+//4-topshiriq
+
+//  function isPalindrome(n) {
+// //     //let digit = 0;
+// //       let k = n;
+
+// //     while (n > 0) {
+// //         digit = k % 10;
+// //         k = Math.floor(k / 10);
+// //     }
+
+// let tempN = n;
+// let reversedN = 0;
+// while (tempN > 0) {
+//     reversedN = reversedN*10 + tempN%10;
+//     tempN = Math.floor(tempN/10);
+// }
+// return n === reversedN;
+
+// }
+
+// console.log(isPalindrome(121));
+
+// const arr = [
+//     [1,2,3]
+//     [6,7,8]
+// ];
+//  arr [1] [2] [3] = 10;
+//  let colors = ["red", "green", "blue"];
+//  console.log(colors);
+
+// const animals = ["cat", "dog", "rabbit" , "hamster" , "parrot"];
+
+// console.log(animals[0]);
+// console.log(animals[1]);
+// console.log(animals[2]);
+// console.log(animals[3]);
+// console.log(animals[4]);
+// console.log(animals.slice(0, 3));
+// console.log(animals.slice(2, 5));
+
+// const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+// months.splice(2, 0, "February");
+
+// console.log(months);
+
+// 1-topshiriq
+
+// function first(arr, n) {
+//   if (arr.length === 0) {
+//     return [];
+//   }
+
+//   if (n === undefined) {
+//     return arr[0];
+//   }
+
+//   if (n < 0) {
+//     return n;
+//   }
+
+//   return arr.slice(0, n);
+// }
+
+
+// console.log(first([7, 9, 0, -2]));       
+// console.log(first([], 3));               
+// console.log(first([7, 9, 0, -2], 3));    
+// console.log(first([7, 9, 0, -2], 6));    
+// console.log(first([7, 9, 0, -2], -3));   
+
+
+
+// function checkPS(password) {
+//   let hasUpper = false;
+//   let hasNumber = false;
+//   let hasSpecial = false;
+
+//   let specialChars = "!@#$%^&*()_+{}|:<>?";
+
+//   for (let i = 0; i < password.length; i++) {
+//     let char = password[i];
+
+//     if (char >= 'A' && char <= 'Z') {
+
+//       hasUpper = true;
+
+//       if(char >= '0' && char <= '9') {
+//         hasNumber = true;
+//       }
+//       if (specialChars.includes(char)) {
+//         hasSpecial = true;
+//       }
+//     }
+//     let score =0;
+
+//     if (password.length >= 8) score++;
+//     if (hasUpper) score++;
+//     if (hasNumber) score++;
+//     if (hasSpecial) score++;
+
+//     if(score <= 2) return "Ortacha";
+//     if(score === 3) return "Yaxshi";
+//     return "Zo'r";
+//   }
+//   console.log(checkPS("Abc123!"));
+//   console.log(checkPS("Afhdgfvsbh!23"));  
+// }
 
