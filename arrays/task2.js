@@ -1,6 +1,6 @@
-function last(list,n) {
+function last(list,n=null) {
     if(n<0) return n;
-    if(n === undefined) return list.pop();
+    if(n === null) return list.pop();
     return list.slice(-n);
 }
 

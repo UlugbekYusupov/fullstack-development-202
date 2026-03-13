@@ -1,6 +1,6 @@
-function first(list,n) {
+function first(list,n=null) {
     if(n<0) return n;
-    if(n === undefined) return list[0];
+    if(n === null) return list[0];
     return list.slice(0,n);
 }
 
