@@ -1,6 +1,8 @@
 // console.log(a)
 // var a = 20
 
+const { version } = require("react");
+
 // Challenge
 // console.log("5"+5); Result: 55
 // console.log("5"-5); Result: 0
@@ -331,7 +333,7 @@
 // console.log(first([7, 9, 0, -2], -3));   
 
 
-
+//2-topshiriq
 // function checkPS(password) {
 //   let hasUpper = false;
 //   let hasNumber = false;
@@ -367,4 +369,305 @@
 //   console.log(checkPS("Abc123!"));
 //   console.log(checkPS("Afhdgfvsbh!23"));  
 // }
+
+//3-topshiriq
+
+// function atmcheck(amount) {
+//   if (amount % 10 !==0){
+//     return "Xato";
+//   }
+//   let count = [100 , 50 , 20 , 10];
+//   let result = {};
+
+//   for (let i = 0; i < count.length; i++) {
+
+//     let mix = Math.floor(amount / count[i]);
+
+//     if (mix > 0) {
+//     result[count[i]] = mix;
+//     amount -= mix * count[i];
+//     }
+// }
+//  return result;
+// }
+// console.log(atmcheck(150));
+// console.log(atmcheck(130));
+
+//4-topshiriq
+
+// function trafficLight() {
+//     console.log("Red");
+//     setTimeout(() => {
+//         console.log("Green");
+//         setTimeout(() => {
+//             console.log("Yellow");
+//             setTimeout(() => {
+                
+//                 trafficLight();
+//             }, 2000); 
+//         }, 3000); 
+//     }, 5000); 
+// }
+
+
+// trafficLight();
+
+
+
+// let car = {
+//     brand: "Tesla",
+//     model: "Model S",
+//     year: 2022,
+//     start: function() {
+//         console.log("Car started");
+//     }
+// };
+// console.log(car.brand);
+// car.start();
+
+
+// let person = new Object();
+// person.name = "Alice";
+// person.age = 30;
+// person.greet = function() {
+// return 'Hello, my name is   ${this.name}';
+
+// };
+// console.log(person.greet());
+
+// function createPerson(name, age) {
+//     return {
+//         name,
+//         age,
+//         greet(){
+//             return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+
+//         }
+//     };
+// }
+// let person1 = createPerson["Bob", 25];
+// let person2 = createPerson["Charlie", 35];
+// console.log[person1.greet()];
+// console.log[person2.greet()];
+
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.greet = function() {
+//         return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+
+//     };
+// }
+// let person1 = new Person["David", 40];
+// let person2 = new Person["Eve", 28];
+// console.log[person1.greet()];
+// console.log[person2.greet()];
+
+// let animal = {
+//     type: "Mammal",
+//     makeSound(){
+//         console.log("Some generic animal sound");
+        
+//     }
+// };
+
+// let dog = Object.create(animal);
+// dog.bread = "Labrador";
+// dog.makeSound();
+// console.log(dog.type);
+
+// class Person {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+//     greet() {
+//         return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+    
+//     }
+// }
+
+// let person1 = new Person("Frank", 45);
+// console.log(person1.greet);
+
+// const config = Object.freeze({
+//     theme: "dark",
+//     version: "1.0.0"
+// });
+
+// config.theme = "light";
+// console.log(config.theme);
+
+//1-challenge
+
+// const students = [
+//  { name: "Alice", scores: [80, 90, 100] },
+//  { name: "Bob", scores: [50, 60, 70] },
+//  { name: "Charlie", scores: [30, 40, 20] }
+// ];
+
+// let topStudent = "";
+// let highestAvg = 0;
+
+// for (let i = 0; i < students.length; i++) {
+
+//     let scores = students[i].scores;
+//     let sum = 0;
+
+//     for (let j = 0; j < scores.length; j++) {
+//         sum += scores[j];
+//     }
+
+//     let avg = sum / scores.length;
+
+//     console.log(students[i].name + " average:", avg);
+
+//     if (avg >= 50) {
+//         console.log(students[i].name + " passed");
+//     } else {
+//         console.log(students[i].name + " failed");
+//     }
+
+//     if (avg > highestAvg) {
+//         highestAvg = avg;
+//         topStudent = students[i].name;
+//     }
+// }
+
+// console.log(topStudent + " has the highest average:", highestAvg);
+
+
+
+// const cart = [
+//  { id: 1, name: "Laptop", price: 900, quantity: 1 },
+//  { id: 2, name: "Mouse", price: 50, quantity: 2 },
+//  { id: 3, name: "Keyboard", price: 100, quantity: 1 }
+// ];
+
+// let total = 0;
+// let mostExpensive = cart[0];
+
+// for (let i = 0; i < cart.length; i++) {
+
+//   total += cart[i].price * cart[i].quantity;
+
+//   if (cart[i].price > mostExpensive.price) {
+//     mostExpensive = cart[i];
+//   }
+
+// }
+
+// if (total > 100) {
+//   total = total * 0.9;
+// }
+
+// console.log("Total Price:", total);
+// console.log("Most Expensive Item:", mostExpensive.name);
+
+
+// const posts = [
+//     { author: "Alice", likes: 100, comments: 20, shares: 5 },
+//     { author: "Bob", likes: 200, comments: 50, shares: 10 },
+//     { author: "Charlie", likes: 150, comments: 30, shares: 8 }
+// ];
+
+
+// function findMostLikedPost(posts) {
+//     let mostLiked = posts[0];
+
+//     for (let i = 1; i < posts.length; i++) {
+//         if (posts[i].likes > mostLiked.likes) {
+//             mostLiked = posts[i];
+//         }
+//     }
+
+//     return mostLiked;
+// }
+
+
+// function totalEngagement(posts) {
+//     let total = 0;
+
+//     for (let post of posts) {
+//         total += post.likes + post.comments + post.shares;
+//     }
+
+//     return total;
+// }
+
+// const mostLikedPost = findMostLikedPost(posts);
+// console.log("Eng ko'p like olgan post:", mostLikedPost);
+
+// const engagement = totalEngagement(posts);
+// console.log("Umumiy engagement:", engagement);
+
+
+
+// const teams = [
+//     { name: "Team A", wins: 5, losses: 2, points: 15, goalsScored: 10, goalsConceded: 5 },
+//     { name: "Team B", wins: 6, losses: 1, points: 18, goalsScored: 12, goalsConceded: 4 },
+//     { name: "Team C", wins: 4, losses: 3, points: 12, goalsScored: 8, goalsConceded: 7 }
+// ];
+
+
+// function sortTeamsByRanking(teams) {
+//     return teams.sort((a, b) => b.points - a.points);
+// }
+
+
+// function findBestTeam(teams) {
+//     let best = teams[0];
+
+//     for (let i = 1; i < teams.length; i++) {
+//         if (teams[i].points > best.points) {
+//             best = teams[i];
+//         }
+//     }
+
+//     return best;
+// }
+
+
+// const sortedTeams = sortTeamsByRanking(teams);
+// console.log("Ranking bo‘yicha jamoalar:", sortedTeams);
+
+// const bestTeam = findBestTeam(teams);
+// console.log("Eng yaxshi jamoa:", bestTeam);
+
+
+
+// const inventory = [
+//   { itemName: "Laptop", category: "Electronics", stock: 5 },
+//   { itemName: "Phone", category: "Electronics", stock: 10 },
+//   { itemName: "Table", category: "Furniture", stock: 3 },
+//   { itemName: "Chair", category: "Furniture", stock: 8 }
+// ];
+
+
+// function totalStockByCategory(category) {
+//   return inventory
+//     .filter(item => item.category === category)
+//     .reduce((sum, item) => sum + item.stock, 0);
+// }
+
+// function lowStockAlert() {
+//   const lowItems = inventory.filter(item => item.stock < 5);
+
+//   if (lowItems.length === 0) {
+//     console.log("Low stock yo‘q");
+//   } else {
+//     console.log("Kam qolgan mahsulotlar:");
+//     lowItems.forEach(item => {
+//       console.log(item.itemName + " - stock: " + item.stock);
+//     });
+//   }
+// }
+
+
+// console.log("Electronics total stock:", totalStockByCategory("Electronics"));
+// console.log("Furniture total stock:", totalStockByCategory("Furniture"));
+
+// lowStockAlert();
+
+
 
