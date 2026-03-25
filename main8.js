@@ -32,6 +32,7 @@ function render() {
     });
 }
 
+
 function label(status) {
     if (status === 'progress') return 'in progress';
     if (status === 'complete') return 'completed';
