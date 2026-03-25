@@ -32,8 +32,6 @@
 // }
 // console.log(a)
 
-// let arr = [-2,-3,6,7,3,2,-6]
-// console.log(arr.sort((a, b) => a - b))
 
 // let a = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 //
