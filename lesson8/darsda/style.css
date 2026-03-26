@@ -1,0 +1,126 @@
+/* body {
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  height: 400px;
+  width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+tr.spaceUnder>td {
+  padding-bottom: 1em;
+} */
+
+
+body {
+  font-family: Arial;
+}
+
+.container {
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.status {
+  padding: 3px 8px;
+  color: white;
+  border-radius: 5px;
+}
+
+.pending {
+  background: orange;
+}
+
+.progress {
+  background: blue;
+}
+
+.completed {
+  background: green;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#addButton {
+  background: #007bff;
+  width: 100%;
+}
+
+.deleteButton {
+  background: red;
+}
+
+#saveButton {
+  background: blue;
+}
+
+#closeButton {
+  background: yellow;
+  color: black;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
