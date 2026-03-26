@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>ToDo</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Interactive To-Do List</h2>
+
+        <div id="myItems" class="items">
+            <div class="task-item">
+                <div class="task-item-title">
+                    <p>Task 1</p>
+                    <div class="task-status">pending</div>
+                </div>
+                <p>Decription</p>
+                <button class="del-btn" type="button">Delete</button>
+            </div>
+        </div>
+        <button id="openModalBtn" class="open-modal-btn" type="button">Add Task</button>
+    </div>
+
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <h3>Add Task</h3>
+
+            <input id="title-ctrl" type="text" placeholder="Task Title">
+            <textarea id="description-ctrl" placeholder="Task Description"></textarea>
+
+            <select id="status-ctrl">
+                <option>Pending</option>
+                <option>In Progress</option>
+                <option>Completed</option>
+            </select>
+
+            <button id="addTaskBtn" class="save-btn">Save Task</button>
+            <button id="closeModalBtn" class="close-btn">Close</button>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
