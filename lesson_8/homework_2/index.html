@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Leaderboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h2>🏆 Add New Team</h2>
+
+<input id="teamName" placeholder="Team Name">
+<input id="wins" placeholder="Wins">
+<input id="losses" placeholder="Losses">
+<input id="scored" placeholder="Goals Scored">
+<input id="conceded" placeholder="Goals Conceded">
+
+<button id="addTeam">
+Add Team
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>🏆 Sports Tournament Leaderboard</h2>
+
+<button id="sortButton">
+Sort by Ranking
+</button>
+
+<button id="highlightButton">
+Highlight Best Team
+</button>
+
+<table>
+<thead>
+<tr>
+
+<th>Rank</th>
+<th>Team</th>
+<th>Wins</th>
+<th>Losses</th>
+<th>Points</th>
+<th>Goal Diff</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableBody">
+</tbody>
+</table>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
