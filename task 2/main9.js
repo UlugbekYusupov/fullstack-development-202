@@ -16,13 +16,13 @@ function check(value) {
         return;
     }
 
-    let upper = 0;
+    let letter = 0;
     let number = 0;
     let special = 0;
 
     for (const char of value) {
-        if (/^[A-Z]$/.test(char)) {
-            upper += 1;
+        if (/^[a-zA-Z]$/.test(char)) {
+            letter += 1;
         } else if (/^[0-9]$/.test(char)) {
             number += 1;
         } else if (/^[^a-zA-Z0-9]$/.test(char)) {
@@ -30,11 +30,11 @@ function check(value) {
         }
     }
 
-    if (upper > 0 && number > 0 && special > 0) {
+    if (letter > 0 && number > 0 && special > 0) {
         setResult("Strong", "white", "#16a34a");
     } else if (
-        (upper > 0 && number > 0) ||
-        (upper > 0 && special > 0) ||
+        (letter > 0 && number > 0) ||
+        (letter > 0 && special > 0) ||
         (number > 0 && special > 0)
     ) {
         setResult("Medium", "white", "#f59e0b");
