@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="app">
+        <div class="display" id="displayId"></div>
+        <div class="buttons">
+            <div class="table">
+                <button class="my-button action-button" type="button" onclick="clickButton('C')">C</button>
+                <button class="my-button action-button" type="button" onclick="clickButton('DEL')">DEL</button>
+                <button class="my-button action-button" type="button" onclick="clickButton('%')">%</button>
+                <button class="my-button action-button" type="button" onclick="clickButton('/')">/</button>
+            </div>
+            <div style="display: flex;gap: 10px">
+                <div class="my-buttons">
+                    <div class="table">
+                        <button class="my-button" type="button" onclick="clickButton('7')">7</button>
+                        <button class="my-button" type="button" onclick="clickButton('8')">8</button>
+                        <button class="my-button" type="button" onclick="clickButton('9')">9</button>
+                    </div>
+                    <div class="table">
+                        <button class="my-button" type="button" onclick="clickButton('4')">4</button>
+                        <button class="my-button" type="button" onclick="clickButton('5')">5</button>
+                        <button class="my-button" type="button" onclick="clickButton('6')">6</button>
+                    </div>
+                    <div class="table">
+                        <button class="my-button" type="button" onclick="clickButton('1')">1</button>
+                        <button class="my-button" type="button" onclick="clickButton('2')">2</button>
+                        <button class="my-button" type="button" onclick="clickButton('3')">3</button>
+                    </div>
+                    <div class="table">
+                        <button class="my-button" type="button" onclick="clickButton('0')">0</button>
+                        <button class="my-button" style="flex: 0.4" type="button" onclick="clickButton('.')">.</button>
+                    </div>
+                </div>
+                <div class="table" style="flex-direction: column">
+                    <button class="my-button action-button" type="button" onclick="clickButton('*')">x</button>
+                    <button class="my-button action-button" type="button" onclick="clickButton('-')">-</button>
+                    <button class="my-button action-button" type="button" onclick="clickButton('+')">+</button>
+                    <button class="my-button action-button" type="button" onclick="clickButton('=')">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11/lib/browser/math.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

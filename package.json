@@ -1,0 +1,17 @@
+{
+  "name": "fullstack-development-202",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UlugbekYusupov/fullstack-development-202/"
+  },
+  "private": true,
+  "dependencies": {
+    "mathjs": "^15.1.1"
+  }
+}
