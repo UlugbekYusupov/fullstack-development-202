@@ -47,6 +47,9 @@ function addTask() {
            "id": tasks.length
        }
        tasks.push(task);
+       titleCtrl.value = "";
+       descriptionCtrl.value = "";
+       statusCtrl.value = "Pending";
        modal.style.display = "none";
        renderTasks();
    }
@@ -57,10 +60,19 @@ function renderTasks() {
     const items = document.getElementById("myItems");
     items.innerHTML = ``;
     tasks.forEach((item)=>{
+        let statusClass = ""
+        if(item.status==="Pending") {
+            statusClass = "status-pending";
+        } else if(item.status==="In Progress") {
+            statusClass = "status-progress";
+        } else if(item.status==="Completed") {
+            statusClass = "status-complete";
+        }
+
         const newItem =  `<div class="task-item">
                     <div class="task-item-title">
                         <p>${item.title}</p>
-                        <div class="task-status">${item.status}</div>
+                        <div class="task-status ${statusClass}">${item.status}</div>
                     </div>
                     <p>${item.description}</p>
                     <button onclick="delTask(${item.id})" class="del-btn" type="button">Delete</button>
