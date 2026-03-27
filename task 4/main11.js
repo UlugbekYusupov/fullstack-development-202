@@ -11,7 +11,9 @@ const timerEl = document.getElementById('timer');
 const sequence = [
     { color: 'red', duration: 30_000 },
     { color: 'yellow', duration: 5_000 },
-    { color: 'green', duration: 30_000 }
+    { color: 'green', duration: 30_000 },
+    // second yellow mirrors real traffic flow when switching back to red
+    { color: 'yellow', duration: 5_000 }
 ];
 
 let timerId = null;
