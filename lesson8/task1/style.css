@@ -51,15 +51,15 @@ body {
 }
 
 .pending {
-  background: orange;
+  background: black;
 }
 
 .progress {
-  background: blue;
+  background: black;
 }
 
 .completed {
-  background: green;
+  background: black;
 }
 
 button {

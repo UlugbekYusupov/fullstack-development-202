@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.card {
+  width: 330px;
+  margin: 100px auto;
+  padding: 20px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#result {
+  margin-top: 15px;
+  padding: 8px;
+  border-radius: 6px;
+  color: white;
+}
+
+.weak {
+  background: red;
+}
+
+.medium {
+  background: orange;
+}
+
+.strong {
+  background: green;
+}

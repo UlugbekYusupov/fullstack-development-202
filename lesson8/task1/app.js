@@ -45,7 +45,6 @@ saveButton.onclick = () => {
 };
 
 taskList.addEventListener("click", (e) => {
-  //indexga qarab ochrish
   if (e.target.classList.contains("deleteButton")) {
     e.target.parentElement.remove();
   }
