@@ -39,4 +39,11 @@ button{
     color: white;
     font-size: 18px;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 5px;
+}
+
+button:active{
+    transform: scale(0.9);
+    transition-duration: 100s;
+    box-shadow: inset rgba(0, 0, 0, 0.24) 0px 4px 6px;
 }

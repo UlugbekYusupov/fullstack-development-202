@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="card">
+    <h1 id="authType">Sign Up</h1>
+
+    <form>
+      <input id="usernameInput" type="text" placeholder="Username" />
+      <input id="emailInput" type="email" placeholder="Email" />
+      <input id="passwordInput" type="password" placeholder="Password" />
+      <button type="submit" onclick="submit()" class="btn primary">Submit</button>
+      <button id="navigateToSignUp" onclick="toRegister()" type="button" class="btn outline">Don't have an account? Sign Up</button>
+      <p id="navigateToLogin" class="login-text">
+        Already have an account? <a  onclick="toLogin()" href="#">Login</a>
+      </p>
+    </form>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
