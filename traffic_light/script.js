@@ -6,11 +6,20 @@ let lights = [redLight,yellowLight,greenLight];
 
 const times = [5,2,3];
 let index = 0;
-let periodicTimerId;
+let periodicTimerId = null;
 let count= 0;
-
+let isStarted = false;
 function start() {
+    if(isStarted) {
+       stop();
+       count = 0;
+    }
+    isStarted = true;
+    lightsLogic();
 
+}
+
+function lightsLogic() {
     periodicTimerId = setInterval(() => {
         console.log(`Tick ${count + 1}`);
         time.innerText = count+1;
@@ -22,10 +31,9 @@ function start() {
             console.log('Timer cancelled');
             count = 0;
             index = (index+1)%times.length;
-            start();
+            lightsLogic();
         }
     }, 1000);
-
 }
 
 function stop() {
