@@ -74,3 +74,23 @@ input:focus {
 .btn.outline:hover {
   background: #eef5ff;
 }
+
+.login-text {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #3b3b3b;
+}
+
+.login-text a {
+  color: #1b73e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+#navigateToSignUp{
+  display: none;
+}
