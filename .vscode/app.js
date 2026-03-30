@@ -624,50 +624,50 @@ const { version } = require("react");
 //         }
 //     }
 
-//     return best;
-// }
+    return best;
+}
 
 
-// const sortedTeams = sortTeamsByRanking(teams);
-// console.log("Ranking bo‘yicha jamoalar:", sortedTeams);
+const sortedTeams = sortTeamsByRanking(teams);
+console.log("Ranking bo‘yicha jamoalar:", sortedTeams);
 
-// const bestTeam = findBestTeam(teams);
-// console.log("Eng yaxshi jamoa:", bestTeam);
-
-
-
-// const inventory = [
-//   { itemName: "Laptop", category: "Electronics", stock: 5 },
-//   { itemName: "Phone", category: "Electronics", stock: 10 },
-//   { itemName: "Table", category: "Furniture", stock: 3 },
-//   { itemName: "Chair", category: "Furniture", stock: 8 }
-// ];
+const bestTeam = findBestTeam(teams);
+console.log("Eng yaxshi jamoa:", bestTeam);
 
 
-// function totalStockByCategory(category) {
-//   return inventory
-//     .filter(item => item.category === category)
-//     .reduce((sum, item) => sum + item.stock, 0);
-// }
 
-// function lowStockAlert() {
-//   const lowItems = inventory.filter(item => item.stock < 5);
-
-//   if (lowItems.length === 0) {
-//     console.log("Low stock yo‘q");
-//   } else {
-//     console.log("Kam qolgan mahsulotlar:");
-//     lowItems.forEach(item => {
-//       console.log(item.itemName + " - stock: " + item.stock);
-//     });
-//   }
-// }
+const inventory = [
+  { itemName: "Laptop", category: "Electronics", stock: 5 },
+  { itemName: "Phone", category: "Electronics", stock: 10 },
+  { itemName: "Table", category: "Furniture", stock: 3 },
+  { itemName: "Chair", category: "Furniture", stock: 8 }
+];
 
 
-// console.log("Electronics total stock:", totalStockByCategory("Electronics"));
-// console.log("Furniture total stock:", totalStockByCategory("Furniture"));
+function totalStockByCategory(category) {
+  return inventory
+    .filter(item => item.category === category)
+    .reduce((sum, item) => sum + item.stock, 0);
+}
 
-// lowStockAlert();
+function lowStockAlert() {
+  const lowItems = inventory.filter(item => item.stock < 5);
+
+  if (lowItems.length === 0) {
+    console.log("Low stock yo‘q");
+  } else {
+    console.log("Kam qolgan mahsulotlar:");
+    lowItems.forEach(item => {
+      console.log(item.itemName + " - stock: " + item.stock);
+    });
+  }
+}
+
+
+console.log("Electronics total stock:", totalStockByCategory("Electronics"));
+console.log("Furniture total stock:", totalStockByCategory("Furniture"));
+
+lowStockAlert();
 
 
 
