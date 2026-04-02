@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Auth Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="card" id="signupCard">
+      <h2>Sign Up</h2>
+      <input type="text" placeholder="Username">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button>Submit</button>
+      <p class="switch">Already have an account?
+        <span id="goLogin">Login</span>
+      </p>
+    </div>
+
+    <div class="card hidden" id="loginCard">
+      <h2>Login</h2>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button>Submit</button>
+      <p class="switch">Don't have an account?
+        <span id="goSignup">Sign Up</span>
+      </p>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
