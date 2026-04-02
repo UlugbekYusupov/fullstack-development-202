@@ -9,28 +9,17 @@ let titleInput = document.getElementById("title")
 let descInput = document.getElementById("desc")
 let statusInput = document.getElementById("status")
 
-
-
-/* modal ochish */
-
 addBtn.addEventListener("click", function(){
 
 modal.style.display = "flex"
 
 })
 
-
-/* modal yopish */
-
 closeBtn.addEventListener("click", function(){
 
 modal.style.display = "none"
 
 })
-
-
-
-/* task qo'shish */
 
 saveBtn.addEventListener("click", function(){
 
@@ -42,7 +31,6 @@ if(title === "" || desc === ""){
 alert("Fill all fields")
 return
 }
-
 
 let task = document.createElement("div")
 task.classList.add("task")
@@ -59,7 +47,6 @@ else{
 badgeClass = "completed"
 }
 
-
 task.innerHTML = `
 <h3>${title}</h3>
 <p>${desc}</p>
@@ -69,9 +56,6 @@ task.innerHTML = `
 
 taskList.appendChild(task)
 
-
-/* delete */
-
 let del = task.querySelector(".delete")
 
 del.addEventListener("click", function(){
@@ -79,9 +63,6 @@ del.addEventListener("click", function(){
 task.remove()
 
 })
-
-
-/* tozalash */
 
 titleInput.value = ""
 descInput.value = ""
