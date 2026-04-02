@@ -1,70 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="./index.css" />
 </head>
-
 <body>
+  <div class="container">
+    <div class="top-buttons">
+      <button class="tab-btn active" id="loginTab" type="button">Login</button>
+      <button class="tab-btn" id="registerTab" type="button">Register</button>
+    </div>
 
-    <!-- <div class="container">
-        <h2>Password Strength Checker</h2>
-        <input type="password" id="password" placeholder="Enter password">
-        <div id="strength" class="strength"></div>
-    </div> -->
+    <div class="form-box">
+      <h2 class="title" id="formTitle">Login</h2>
 
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Calculator</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-
-    <body>
-        <div class="calculator">
-            <input type="text" class="display" id="display" readonly />
-
-            <div class="buttons">
-                <button class="btn operator" onclick="clearDisplay()">C</button>
-                <button class="btn operator" onclick="deleteLast()">DEL</button>
-                <button class="btn operator" onclick="appendValue('%')">%</button>
-                <button class="btn operator" onclick="appendValue('/')">÷</button>
-
-                <button class="btn" onclick="appendValue('7')">7</button>
-                <button class="btn" onclick="appendValue('8')">8</button>
-                <button class="btn" onclick="appendValue('9')">9</button>
-                <button class="btn operator" onclick="appendValue('*')">×</button>
-
-                <button class="btn" onclick="appendValue('4')">4</button>
-                <button class="btn" onclick="appendValue('5')">5</button>
-                <button class="btn" onclick="appendValue('6')">6</button>
-                <button class="btn operator" onclick="appendValue('-')">−</button>
-
-                <button class="btn" onclick="appendValue('1')">1</button>
-                <button class="btn" onclick="appendValue('2')">2</button>
-                <button class="btn" onclick="appendValue('3')">3</button>
-                <button class="btn operator" onclick="appendValue('+')">+</button>
-
-                <button class="btn zero" onclick="appendValue('0')">0</button>
-                <button class="btn" onclick="appendValue('.')">.</button>
-                <button class="btn equal" onclick="calculateResult()">=</button>
-            </div>
+      <form id="authForm">
+        <div class="input-group hidden" id="usernameGroup">
+          <label for="username">Login</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Login kiriting"
+            minlength="3"
+          />
         </div>
 
-        <script src="script.js"></script>
-    </body>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+        </div>
 
-    </html>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Kamida 8 ta belgi"
+            minlength="8"
+            required
+          />
+        </div>
 
+        <button type="submit" class="submit-btn" id="submitBtn">Login</button>
+        <p class="message" id="message"></p>
+      </form>
+    </div>
+  </div>
 
-    <!-- <script src="./password.js"></script> -->
-    <script src="./calculyatot.js"></script>
+  <script src="./auth.js"></script>
 </body>
-
 </html>
